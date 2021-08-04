@@ -60,6 +60,7 @@ int main()
             previous_line = current_line;
         }
     }
+    nu--;
 
     if (pairs > 1)
     {
