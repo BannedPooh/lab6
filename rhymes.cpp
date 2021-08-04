@@ -40,12 +40,22 @@ int main()
         nu++;
         while (!in_stream.eof())
         {
+            
             getline(in_stream, current_line);
             if (current_line.empty())
             {
+                previous_line = "";
                 nu++;
                 continue;
             }
+
+            if (previous_line == "")
+            {
+                previous_line = current_line;
+                nu++;
+                continue;
+            }
+
             // cout<<"L: "<<current_line<<endl;
             string previous_wd = last_word(word_clean_up(previous_line));
             string current_wd = last_word(word_clean_up(current_line));
