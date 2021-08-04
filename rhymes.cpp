@@ -43,6 +43,7 @@ int main()
             getline(in_stream, current_line);
             if (current_line.empty())
             {
+                nu++;
                 continue;
             }
             // cout<<"L: "<<current_line<<endl;
